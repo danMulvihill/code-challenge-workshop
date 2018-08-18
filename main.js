@@ -14,6 +14,7 @@ function revArray(inty){
     strInty = inty.toString();
     arStrInty = strInty.split("").reverse();
     let inties = []
+    //use a loop to convert array members from string to ints:
     for (let i = 0; i<arStrInty.length; i++){        
         inties.push(parseInt(arStrInty[i]));
     }
@@ -25,7 +26,9 @@ console.log("reverse Array of Ints: "+revArray(12345));
 console.log("Fibonacci seq: ")
 
 function Fibonacci(size){
-    var i=1; var j=0; var k=0;
+    var i=1; 
+    var j=0; 
+    var k=0;
     while(size > 0){ 
         k = i;
         i = i+j;
@@ -35,6 +38,9 @@ function Fibonacci(size){
     }
 }
 Fibonacci(10)
+
+
+
 
 function checkCoupon(coup){
     var today = new Date();
@@ -60,6 +66,7 @@ function checkCoupon(coup){
 console.log("Coupon check: "+checkCoupon("August 17, 2018"))
 
 
+
 function validateEmail(email){
     email = email.toLowerCase();
     var atInd = email.indexOf("@");
@@ -80,7 +87,6 @@ function validateEmail(email){
     var emails = email.split("@");
 
     //check to see if first part has letters, nums or underscore
-    console.log(emails[0])
     var x = emails[0].match(/[a-z0-9_]/);
     console.log(x)
     if (x == null) return "invalid email"
@@ -92,5 +98,5 @@ function validateEmail(email){
     
     return "valid email"
 }
-    //if you read this, I have not quite got the last two regEx matchs working
+    //if I hadn't deleted this comment yet, I have not quite figured out the last two regEx tests
 console.log(validateEmail("x#d@y.zt"));
